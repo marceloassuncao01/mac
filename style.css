@@ -1,158 +1,62 @@
-footer {
-    background: rgba(0, 0, 0, 0.95);
-    border-top: 2px solid #0f0;
-    padding: 30px 0;
-    margin-top: 50px;
-    width: 100%;
+/* --- ADIÇÕES PARA A PÁGINA DE CONTATO (Sem quebrar o Index) --- */
+
+/* Ajuste das bandeiras em qualquer página */
+.flag {
+    width: 25px !important;
+    height: auto !important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
-.footer-content {
+/* Estilo do formulário (apenas para a classe .box que está no Contato) */
+.box {
+    background: rgba(0, 10, 0, 0.9);
+    border: 1px solid #0f0;
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto; /* Centraliza na tela */
+    font-family: 'Courier New', monospace;
+}
+
+.form-contato {
     display: flex;
-    justify-content: space-evenly; /* Distribui as colunas por igual */
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.footer-section {
-    width: 250px; /* Largura fixa para evitar desalinhamento */
-    margin: 10px;
-}
-
-.footer-section h4 {
+.form-contato label {
     color: #0ff;
     font-size: 14px;
-    letter-spacing: 2px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
 }
 
-#status-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#status-list li {
-    font-size: 13px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-}
-
-/* Estilo do Contador de Acessos */
-#num-acessos {
-    color: #0ff;
-    text-shadow: 0 0 8px #0ff;
+.form-contato input, 
+.form-contato textarea {
+    background: #000;
+    border: 1px solid #333;
+    color: #0f0;
+    padding: 10px;
     font-family: 'Courier New', monospace;
-    margin-left: 5px;
 }
 
-.status-dot {
-    height: 8px;
-    width: 8px;
-    background-color: #0f0;
-    border-radius: 50%;
-    margin-right: 10px;
-    box-shadow: 0 0 5px #0f0;
-    animation: blink 1.5s infinite;
+.form-contato input:focus, 
+.form-contato textarea:focus {
+    border-color: #0ff;
+    outline: none;
 }
 
-.social-links {
-    display: flex;
-    flex-direction: column; /* Links um embaixo do outro para alinhar melhor */
-    gap: 8px;
-}
-
-.social-links a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 12px;
-    border-left: 2px solid #333;
-    padding-left: 8px;
+.form-contato button {
+    background: #0f0;
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
-.social-links a:hover {
-    color: #0f0;
-    border-left: 2px solid #0f0;
-    padding-left: 12px;
-}
-
-/* Destaque para o NOSTR */
-.nostr-link:hover {
-    color: #9d33d6 !important;
-    border-left-color: #9d33d6 !important;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 10px;
-    color: #333;
-    margin-top: 30px;
-    letter-spacing: 5px;
-}
-/* O BLOCO DA NOTÍCIA */
-.post {
-    background: rgba(0, 20, 0, 0.8);
-    border: 1px solid #0f0;
-    padding: 15px;
-    margin-bottom: 15px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Movimento suave e elástico */
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-/* O EFEITO DE MOVIMENTO PARA FRENTE */
-.post:hover {
-    transform: scale(1.03) translateY(-5px); /* Aumenta levemente e sobe */
-    background: rgba(0, 40, 0, 0.9);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
-    border-color: #0ff; /* Muda a borda para ciano no hover */
-    z-index: 10; /* Garante que ele fique por cima dos outros ao crescer */
-}
-
-/* AJUSTE NO LINK DENTRO DO POST */
-.post h3 a {
-    text-decoration: none;
-    color: #0f0;
-    transition: color 0.3s;
-}
-
-.post:hover h3 a {
-    color: #fff; /* O texto brilha em branco quando você passa o mouse */
-}
-/* O BLOCO DA NOTÍCIA (ESTADO NORMAL) */
-.post {
-    background: rgba(0, 10, 0, 0.85); /* Fundo escuro mantido */
-    border: 1px solid #ffffff;       /* Borda Branca inicial */
-    padding: 15px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-/* O TEXTO (ESTADO NORMAL) */
-.post h3 a {
-    text-decoration: none;
-    color: #00ffff;                 /* Letras Ciano */
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-/* --- O EFEITO AO PASSAR O MOUSE (HOVER) --- */
-.post:hover {
-    transform: scale(1.03) translateY(-5px);
-    border: 2px solid #00ffff;       /* Borda vira Ciano */
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Brilho Ciano na borda */
-    background: rgba(0, 20, 0, 0.95); /* Fundo levemente mais escuro para destaque */
-}
-
-/* O TEXTO QUANDO O MOUSE ESTÁ EM CIMA */
-.post:hover h3 a {
-    color: #ffffff;                 /* Letras ficam Brancas */
-    text-shadow: 0 0 8px #ffffff;   /* Brilho branco nas letras */
+.form-contato button:hover {
+    background: #0ff;
+    box-shadow: 0 0 10px #0ff;
 }
