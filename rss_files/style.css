@@ -1,0 +1,223 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Consolas, monospace;
+  background-color: #000;
+  color: #00ff00;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  border-bottom: 2px solid cyan;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1, header p {
+  color: #00ff00;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+header nav ul li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: cyan;
+}
+
+/* Drop Down */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  border: 2px solid cyan;
+  min-width: 160px;
+  box-shadow: 0 0 10px cyan;
+  animation: fadeIn 0.5s;
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  color: #00ff00;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  color: cyan;
+}
+
+.show {
+  display: block;
+}
+
+/* Bandeira */
+.flag {
+  width: 30px;   /* mantém o tamanho original */
+  height: auto;
+  margin-left: auto; /* empurra para a direita no menu */
+}
+
+/* Formulário de contato */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid cyan;
+  box-shadow: 0 0 15px cyan;
+  background-color: #000;
+}
+
+.form-contato label {
+  margin: 10px 0 5px;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+  background-color: #000;
+  border: 1px solid cyan;
+  color: #00ff00;
+  padding: 10px;
+  font-family: Consolas, monospace;
+  resize: none;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.form-contato button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #000;
+  border: 2px solid cyan;
+  color: #00ff00;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: cyan;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  border-top: 2px solid cyan;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: #00ff00;
+  margin-bottom: 10px;
+}
+
+footer .flag {
+  display: block;
+  margin: 10px auto; /* centraliza no rodapé */
+}
+
+/* Centralizar títulos */
+.box h2 {
+  text-align: center;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+/* Ticker */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  border-top: 2px solid cyan;
+  border-bottom: 2px solid cyan;
+  background-color: #000;
+}
+
+.ticker p {
+  display: inline-block;
+  white-space: nowrap;
+  color: #00ff00;
+  padding: 10px;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#external-viewer {
+  margin: 20px auto;
+  border: 2px solid cyan;
+  box-shadow: 0 0 10px cyan;
+  background-color: #000;
+}
+#viewer-frame {
+  background-color: #000;
+}
+#crypto-news {
+  background-color: #000;
+  border: 2px solid cyan;
+  box-shadow: 0 0 10px cyan;
+  padding: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  font-family: Consolas, monospace;
+  text-align: justify;   /* texto justificado */
+  margin-left: 0;        /* alinhado à esquerda */
+  margin-right: auto;
+}
+
+#crypto-news h2 {
+  color: #00ff00;
+  text-align: left;      /* título alinhado à esquerda */
+  margin-bottom: 10px;
+}
+
+#external-viewer {
+  margin: 20px auto;
+  border: 2px solid cyan;
+  box-shadow: 0 0 10px cyan;
+  background-color: #000;
+}
+
+#viewer-frame {
+  background-color: #000;
+}
+
+
